@@ -1,6 +1,7 @@
-- host: 172.31.39.225
+- host: 172.31.45.240
   tasks:
     - name: Install apache server
       yum:
        name: httpd
        state: present
+       
