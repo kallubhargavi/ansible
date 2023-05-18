@@ -14,8 +14,16 @@
       copy:
         src: index.html
         dest: /var/www/html/
+    - name: change port number
+      lineinfile:
+        dest: "/etc/ssh/sshd_config"
+        regexp: '^listen'
+        line: 'listen 8080'
+      notify:
+       - restarted appache
+      handlers:  
     - name: restarted
       service: 
          name: httpd
          state: restarted
-         enabled: True
+         enabled: True         
