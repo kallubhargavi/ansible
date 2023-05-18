@@ -10,3 +10,13 @@
         name: httpd
         state: started
         enabled: True
+    - name: put html file into server
+      copy:
+        src: index.html
+        dest: /var/www/html/
+    - name: restart
+      service: 
+         name: httpd
+         state: restart
+         enabled: True
+         
