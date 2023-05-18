@@ -1,4 +1,4 @@
-- host: 172.31.45.240
+- host: 172.31.12.139
   tasks:
     - name: Install apache server
       yum:
