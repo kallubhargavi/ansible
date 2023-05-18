@@ -16,7 +16,7 @@
         dest: /var/www/html/
     - name: change port number
       lineinfile:
-        dest: "/etc/ssh/sshd_config"
+        path: /etc/httpd/conf/httpd.conf
         regexp: '^listen'
         line: 'listen 8080'
       notify:
