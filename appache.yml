@@ -14,14 +14,11 @@
       copy:
         src: index.html
         dest: /var/www/html/
-    - name: change port number
+    - name: change apache port 
       lineinfile:
         path: /etc/httpd/conf/httpd.conf
         regexp: '^listen'
         line: 'listen 8080'
-      notify:
-       - restarted appache
-      handlers:  
     - name: restarted
       service: 
          name: httpd
