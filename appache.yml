@@ -19,8 +19,8 @@
         path: /etc/httpd/conf/httpd.conf
         regexp: '^listen'
         line: 'listen 80'
-        notify: 
-           -restarted
+      notify: 
+        -restarted
   handlers:
     - name: restarted
       service: 
