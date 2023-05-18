@@ -19,4 +19,8 @@
         path: /etc/httpd/conf/httpd.conf
         regexp: '^listen'
         line: 'listen 80'
-     
+    - name: restarted
+      service: 
+         name: httpd
+         state: restarted
+                 
