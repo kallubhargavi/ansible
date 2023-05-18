@@ -14,9 +14,8 @@
       copy:
         src: index.html
         dest: /var/www/html/
-    - name: restart
+    - name: restarted
       service: 
          name: httpd
-         state: restart
+         state: restarted
          enabled: True
-         
