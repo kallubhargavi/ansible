@@ -1,4 +1,4 @@
-- hosts: 172.31.35.230
+- hosts: apache
   become: True
   tasks:
     - name: Install apache server
@@ -9,9 +9,7 @@
       service: 
         name: httpd
         state: started
-        enabled: True
-      notify: 
-        - restart apache  
+        enabled: True  
     - name: put html file into server
       copy:
         src: index.html

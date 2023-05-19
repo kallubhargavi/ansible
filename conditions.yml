@@ -1,4 +1,4 @@
-- hosts: 172.31.35.230
+- hosts: apache
   become: TRue
   tasks:
     - name: install git on linux
