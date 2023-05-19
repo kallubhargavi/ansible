@@ -10,6 +10,8 @@
         name: httpd
         state: started
         enabled: True
+      notify: 
+        - restart apache  
     - name: put html file into server
       copy:
         src: index.html
