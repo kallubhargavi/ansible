@@ -14,15 +14,5 @@
       copy:
         src: index.html
         dest: /var/www/html/
-    - name: change apache port 
-      lineinfile:
-        path: /etc/httpd/conf/httpd.conf
-        regexp: '^Listen'
-        line: 'Listen 8080' 
-      notify: 
-        - restart apache
-    - name: restart apache
-      service: 
-         name: httpd
-         state: restarted
+   
         
