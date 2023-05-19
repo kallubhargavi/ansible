@@ -18,8 +18,10 @@
       lineinfile:
         path: /etc/httpd/conf/httpd.conf
         regexp: '^Listen'
-        line: 'Listen 80' 
-    - name: restarted
+        line: 'Listen 8080' 
+      notify: 
+        - restart apache
+    - name: restart apache
       service: 
          name: httpd
          state: restarted
