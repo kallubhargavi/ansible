@@ -1,0 +1,14 @@
+- hosts: 172.31.35.230
+  become: TRue
+  tasks:
+    - name: install git on linux
+      yum:
+        name: git
+        state: present
+      when: ansible_os_family == "Redhat"
+    - name: install git on ubuntu
+      apt:
+        name: git
+        state: present
+      when: ansible_os_family == "Debian"
+      
