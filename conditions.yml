@@ -5,10 +5,9 @@
       yum:
         name: git
         state: present
-      when: ansible_os_family == "Redhat"
+      when: ansible_os_family == "Linux"
     - name: install git on ubuntu
       apt:
         name: git
         state: present
       when: ansible_os_family == "Debian"
-      
